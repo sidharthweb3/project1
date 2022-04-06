@@ -301,9 +301,6 @@ transferETH = async () => {
 
 transferETHPool = async () => {
   let _amount = String(document.querySelector("#amountOfETH").value);
-  //let _address;
-  //let _address = String(document.querySelector("#addressToReceive").value);
-
   const options = {
     type: "native",
     amount: Moralis.Units.ETH(_amount),
@@ -417,11 +414,13 @@ if (window.location.href == dashboard ){
 
   document.querySelector("#transfer-ETH").onclick = displayTransferETH;
   document.querySelector("#ETHTransferButton").onclick = transferETH;
+  document.querySelector("#ETHTransferToPoolButton").onclick =
+    transferETHPool;
 
   document.querySelector("#transfer-ERC20").onclick = displaytransferERC20;
   document.querySelector("#ERC20TransferButton").onclick = transferERC20;
  
- document.querySelector('#ETHTransferToPoolButton').onclick = transferETHPool;
+
 
   document.querySelector("#transfer-nfts").onclick = displaytransferNFTs;
   document.querySelector("#btn-get-transactions2").onclick = getTransferNFTs;
