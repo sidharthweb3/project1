@@ -8,7 +8,7 @@ Moralis.serverURL = "https://z1i6a1fvozov.usemoralis.com:2053/server";
 //let dashboard = "http://127.0.0.1:5501/dashboard.html";
 
 // REDIRECT USER BASED ON STATUS
-if (Moralis.User.current() == null && window.location.href != homepage) {
+if (Moralis.User.current() == null && window.location.href != "index.html") {
   document.querySelector("body").style.display = "none";
   window.location.href = "index.html";
 }
