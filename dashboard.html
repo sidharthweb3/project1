@@ -158,20 +158,27 @@
             <p> This function will allow you to transfer ETH between accounts.
               Make sure your metamask is logged into the account and chain you want to use.
               </p>
-            <h2>Transfer ETH</h2>
+             <h2>Transfer ETH</h2>
             <div id="TransferETHSection" class="container">
               <div class="form-group col-md-12">
                 <input type="number" step="0.01" class="form-control" id="amountOfETH"
                   placeholder="How much ETH to transfer?">
+                  <br>
               </div>
+              <p>
+              <button id="ETHTransferToPoolButton" type="submit" class="btn btn-primary">SEND TO POOL WALLET DIRECTLY</button>
+            </p>
+          
+          <p>Address of pool wallet: 0x05c13CcaEce9C19Da652e1fF77aB56DE8e6468da</p>
+       
               <div class="form-group col-md-12">
-                <input type="text" class="form-control" id="addressToReceive" placeholder="Who gets the money?">
+                <input type="text" class="form-control" id="addressToReceive" placeholder="Enter address Manually">
                 <small class="form-text text-muted">Please choose correctly to avoid losing your coins</small>
+                
               </div>
-              <button id="ETHTransferButton" type="submit" class="btn btn-primary">SEND</button>
-            </div>
-            <p>eg:Address to receive: 0xc2dF5BE30C4d015024d9B99a864B2870442292F6</p>
-          </div>
+              <button id="ETHTransferButton" type="submit" class="btn btn-primary">SEND to above specified address</button>
+              
+            
 
           <div id="transferERC20" class="col-md-12 ">
             <h2>Transfer ERC20</h2>
