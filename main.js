@@ -380,7 +380,7 @@ transferNFTs = async () => {
 };
 
 // DASHBOARD LISTENERS
-if (window.location.href == "https://sidharthweb3.github.io/project1/dashboard.html" ){
+if (window.location.href == dashboard ){
   document.querySelector("#btn-logout").onclick = logout;
 
   document.querySelector("#get-transactions-link").onclick =
