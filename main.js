@@ -4,8 +4,8 @@ console.log("hello world");
 Moralis.initialize("gY58LkSzc0p2qkoOzLlRFTjc2bFc0sdZRwvlPIaP");
 Moralis.serverURL = "https://z1i6a1fvozov.usemoralis.com:2053/server";
 
-//let homepage = "http://127.0.0.1:5501/index.html";
-//let dashboard = "http://127.0.0.1:5501/dashboard.html";
+let homepage = "index.html";
+let dashboard = "dashboard.html";
 
 // REDIRECT USER BASED ON STATUS
 if (Moralis.User.current() == null && window.location.href != "index.html") {
