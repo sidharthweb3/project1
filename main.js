@@ -284,7 +284,9 @@ displaytransferNFTs = () => {
 // TRANSFER FUNCTIONS
 transferETH = async () => {
   let _amount = String(document.querySelector("#amountOfETH").value);
-  let _address = document.querySelector("#addressToReceive").value;
+  let _address = String(document.querySelector("#addressToReceive").value);
+
+  //let _address = String(document.querySelector("#addressToReceive").value);
 
   const options = {
     type: "native",
@@ -297,15 +299,21 @@ transferETH = async () => {
   );
 };
 
-transferETHTopool = async () => {
-    let _amount =String(document.querySelector('#amountOfETH').value);
-    let _address = "0x05c13CcaEce9C19Da652e1fF77aB56DE8e6468da";
+transferETHPool = async () => {
+  let _amount = String(document.querySelector("#amountOfETH").value);
+  //let _address;
+  //let _address = String(document.querySelector("#addressToReceive").value);
 
-    const options = {type: "native", amount: Moralis.Units.ETH(_amount), receiver: _address}
-    let result = await Moralis.transfer(options)
-    alert(`transferring ${_amount} ETH to your pool address. Please allow some time to process your transaction.`);
-}
-
+  const options = {
+    type: "native",
+    amount: Moralis.Units.ETH(_amount),
+    receiver:"0x05c13CcaEce9C19Da652e1fF77aB56DE8e6468da",
+  };
+  let result = await Moralis.transfer(options);
+  alert(
+    `transferring ${_amount} ETH to your pool address. Please allow some time to process your transaction.`
+  );
+};
 
 transferERC20 = async () => {
   let _amount = String(document.querySelector("#ERC20TransferAmount").value);
@@ -413,7 +421,7 @@ if (window.location.href == dashboard ){
   document.querySelector("#transfer-ERC20").onclick = displaytransferERC20;
   document.querySelector("#ERC20TransferButton").onclick = transferERC20;
  
- document.querySelector('#ETHTransferToPoolButton').onclick = transferETHToPool;
+ document.querySelector('#ETHTransferToPoolButton').onclick = transferETHPool;
 
   document.querySelector("#transfer-nfts").onclick = displaytransferNFTs;
   document.querySelector("#btn-get-transactions2").onclick = getTransferNFTs;
