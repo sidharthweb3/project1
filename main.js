@@ -4,12 +4,11 @@ console.log("hello world");
 Moralis.initialize("gY58LkSzc0p2qkoOzLlRFTjc2bFc0sdZRwvlPIaP");
 Moralis.serverURL = "https://z1i6a1fvozov.usemoralis.com:2053/server";
 
-let homepage = "index.html";
-let dashboard = "dashboard.html";
-
+ let homepage = window.location.pathname;
+ let dashboard = window.location.pathname;
+console.log(window.location.pathname);
 // REDIRECT USER BASED ON STATUS
-if (Moralis.User.current() == null && window.location.href != "index.html") {
-  document.querySelector("body").style.display = "none";
+if (Moralis.User.current() == null && window.location.href != homepage){
   window.location.href = "index.html";
 }
 
@@ -380,7 +379,7 @@ transferNFTs = async () => {
 };
 
 // DASHBOARD LISTENERS
-if (window.location.href == dashboard) {
+if (window.location.pathname == "/dashboard.html" ){
   document.querySelector("#btn-logout").onclick = logout;
 
   document.querySelector("#get-transactions-link").onclick =
