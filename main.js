@@ -11,7 +11,7 @@ console.log(window.location.pathname);
 /// REDIRECT USER BASED ON STATUS
 if (Moralis.User.current() == null && window.location.href != homepage) {
   document.querySelector('body').style.display = 'none';
-  window.location.href = "index.html";
+  window.location.href = "/project1/index.html";
 }
 //HELPER FUNCTIONS
 login = async () => {
