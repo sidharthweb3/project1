@@ -27,7 +27,7 @@ login = async () => {
       }
       await user.save();
     }
-    window.location.href = "dashboard.html";
+    window.location.href = "https://sidharthweb3.github.io/project1/dashboard.html";
   });
 };
 
@@ -380,7 +380,7 @@ transferNFTs = async () => {
 };
 
 // DASHBOARD LISTENERS
-if (window.location.pathname == "/dashboard.html" ){
+if (window.location.href == "https://sidharthweb3.github.io/project1/dashboard.html" ){
   document.querySelector("#btn-logout").onclick = logout;
 
   document.querySelector("#get-transactions-link").onclick =
