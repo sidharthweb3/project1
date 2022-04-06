@@ -420,9 +420,7 @@ if (window.location.href == dashboard ){
   document.querySelector("#transfer-ERC20").onclick = displaytransferERC20;
   document.querySelector("#ERC20TransferButton").onclick = transferERC20;
  
-
-
-  document.querySelector("#transfer-nfts").onclick = displaytransferNFTs;
+ document.querySelector("#transfer-nfts").onclick = displaytransferNFTs;
   document.querySelector("#btn-get-transactions2").onclick = getTransferNFTs;
 
   document.querySelector("#btn-transfer-selected-nft").onclick = transferNFTs;
