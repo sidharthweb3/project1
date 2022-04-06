@@ -4,14 +4,15 @@ console.log("hello world");
 Moralis.initialize("gY58LkSzc0p2qkoOzLlRFTjc2bFc0sdZRwvlPIaP");
 Moralis.serverURL = "https://z1i6a1fvozov.usemoralis.com:2053/server";
 
- let homepage = window.location.pathname;
- let dashboard = window.location.pathname;
+ let homepage = "https://sidharthweb3.github.io/project1/index.html";
+ let dashboard = "https://sidharthweb3.github.io/project1/dashboard.html";
 console.log(window.location.pathname);
-// REDIRECT USER BASED ON STATUS
-if (Moralis.User.current() == null && window.location.href != homepage){
+
+/// REDIRECT USER BASED ON STATUS
+if (Moralis.User.current() == null && window.location.href != homepage) {
+  document.querySelector('body').style.display = 'none';
   window.location.href = "index.html";
 }
-
 //HELPER FUNCTIONS
 login = async () => {
   await Moralis.Web3.authenticate().then(async function (user) {
@@ -31,7 +32,7 @@ login = async () => {
 };
 
 if (Moralis.User.current() != null && window.location.href == homepage) {
-  window.location.href = "dashboard.html";
+  
 }
 
 logout = async () => {
